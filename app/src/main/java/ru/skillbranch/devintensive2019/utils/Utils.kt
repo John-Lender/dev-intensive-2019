@@ -3,8 +3,7 @@ package ru.skillbranch.devintensive2019.utils
 object Utils {
     fun parseFullName(fullName: String?): Pair<String?, String?>{//Возвращает имя и фамилию
         val str: List<String>? = fullName?.split(' ')
-        val pairOfFullName: Pair<String?, String?> = Pair(str?.getOrNull(0), str?.getOrNull(1))
-        return pairOfFullName
+        return str?.getOrNull(0) to str?.getOrNull(1)
     }
     fun transliteration(name: String, devider: String = " "): String{ //Переводит слово на киррилице в слово на латинице
         var nameLat: String = ""
